@@ -36,11 +36,15 @@ header {
     width: 80%;
 }
 
-header img {
+header img{
     position: absolute;
     top: 0em;
     width: 10em;
     height: 10em;
+}
+
+#oto {
+    left: 44em;
 }
 
 header #topname {
@@ -78,7 +82,7 @@ nav ul {
     list-style-type: none;
 }
 
-nav .hidden {
+nav #hidden {
     display: none;
 }
 
@@ -96,6 +100,10 @@ nav #github {
     right: 8em;
     width: 3em;
     height: 3em;
+}
+
+nav #web {
+    cursor: pointer;
 }
 
 /* コンテンツ */

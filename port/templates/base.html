@@ -12,25 +12,30 @@
         <div id="container">
             <header>
                 <a href="{% url 'home' %}" >
-                    <img src="{% static 'media/mizumura.png' %}" alt="logo">
+                    <img src="{% static 'media/mizumura.png' %}" alt="logo" id="logo">
                     <div id="topname"><h1>MIZUMURA KOSUKE</h1></div>
+                    <img src="{% static 'media/oto.png' %}" alt="logo" id="oto">
                 </a>
             </header>
             <nav id="main_menu">
                 <h2>works</h2>
                 <div class="work">
+                    <div id="web">
                         <h3>WEB</h3>
-                    <ul class="hidden">
-                        <li>
-                            <a href="https://loaferofficialsite.herokuapp.com/">Loafer Official Site</a>
-                        </li>
-                        <li>
-                            <a href="">contents2</a>
-                        </li>
-                        <li>
-                            <a href="">contents3</a>
-                        </li>
-                    </ul>
+                    </div>
+                    <div id="hidden">
+                        <ul>
+                            <li>
+                                <a href="https://loaferofficialsite.herokuapp.com/">Loafer Official Site</a>
+                            </li>
+                            <li>
+                                <a href="">contents2</a>
+                            </li>
+                            <li>
+                                <a href="">contents3</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <a href=""><div class="work"><h3>ART</h3></div></a>
                 <a href=""><div class="work"><h3>MUSIC</h3></div></a>
