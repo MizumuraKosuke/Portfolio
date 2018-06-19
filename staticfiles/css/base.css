@@ -17,5 +17,91 @@ body {
 }
 
 h2 {
-    color: #ff11ff;
+    text-align: center;
 }
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* ヘッダー */
+header {
+    position: relative;
+    top: 5em;
+    margin: auto;
+    width: 80%;
+}
+
+header img {
+    position: absolute;
+    top: 0em;
+    width: 10em;
+    height: 10em;
+}
+
+header #topname {
+    position: absolute;
+    top: 3.5em;
+    left: 15em;
+}
+
+header h1 {
+    font-size: 2.5em;
+}
+
+/* ナビゲーター */
+nav {
+    position: relative;
+    top: 20em;
+}
+
+nav .work {
+    float: left;
+    background-color: black;
+    width: 32%;
+    margin-top: 2em;
+    margin-left: 1%;
+}
+
+nav h3 {
+    color: white;
+    font-size: 2em;
+    text-align: center;
+    padding: 1em 0;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav li {
+    border-top: solid 0.1em whitesmoke;
+}
+
+nav li a {
+    color: white;
+}
+
+nav #github {
+    position: absolute;
+    top: 1.35em;
+    right: 8em;
+    width: 3em;
+    height: 3em;
+}
+
+/* コンテンツ */
+#contents {
+   position: relative;
+   top: 30em;
+   width: 100%:
+}
+
+/* ホーム */
+#prof img {
+    width: 10em;
+    height: 10em;
+}
+
+/* フッター */
