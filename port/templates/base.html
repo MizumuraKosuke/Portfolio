@@ -11,28 +11,30 @@
     <body>
         <div id="container">
             <header>
-                <a href="" >
+                <a href="{% url 'home' %}" >
                     <img src="{% static 'media/mizumura.png' %}" alt="logo">
-                    <h1>MIZUMURA KOSUKE</h1>
+                    <div id="topname"><h1>MIZUMURA KOSUKE</h1></div>
                 </a>
             </header>
             <nav id="main_menu">
-                <h2>Works</h2>
-                <h3 class="work">WEB</h3>
-                <ul>
-                    <li>
-                        <a href="https://loaferofficialsite.herokuapp.com/">Loafer Official Site</a>
-                    </li>
-                    <li>
-                        <a href="">contents2</a>
-                    </li>
-                    <li>
-                        <a href="">contents3</a>
-                    </li>
-                </ul>
-                <a href=""><h3 class="work">ART</h3></a>
-                <a href=""><h3 class="work">MUSIC</h3></a>
-                <a href="https://github.com/MizumuraKosuke"><img src="{% static 'media/GitHub.png' %}" alt="GitHub"></a>
+                <h2>works</h2>
+                <div class="work">
+                        <h3>WEB</h3>
+                    <ul>
+                        <li>
+                            <a href="https://loaferofficialsite.herokuapp.com/">Loafer Official Site</a>
+                        </li>
+                        <li>
+                            <a href="">contents2</a>
+                        </li>
+                        <li>
+                            <a href="">contents3</a>
+                        </li>
+                    </ul>
+                </div>
+                <a href=""><div class="work"><h3>ART</h3></div></a>
+                <a href=""><div class="work"><h3>MUSIC</h3></div></a>
+                <a href="https://github.com/MizumuraKosuke"><img src="{% static 'media/GitHub.png' %}" alt="GitHub" id="github"></a>
             </nav>
             <div id="contents">
                 {% block content %}
