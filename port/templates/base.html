@@ -10,8 +10,29 @@
     </head>
     <body>
         <div id="container">
-            <header></header>
-            <nav></nav>
+            <header>
+                <a href="" >
+                    <img src="{% static 'media/mizumura.png' %}" alt="logo">
+                    <h1>MIZUMURA KOSUKE</h1>
+                </a>
+            </header>
+            <nav id="main_menu">
+                <h2>Works</h2>
+                <h3 class="work">WEB</h3>
+                <ul>
+                    <li>
+                        <a href="https://loaferofficialsite.herokuapp.com/">Loafer Official Site</a>
+                    </li>
+                    <li>
+                        <a href="">contents2</a>
+                    </li>
+                    <li>
+                        <a href="">contents3</a>
+                    </li>
+                </ul>
+                <a href=""><h3 class="work">ART</h3></a>
+                <a href=""><h3 class="work">MUSIC</h3></a>
+            </nav>
             <div id="contents">
                 {% block content %}
                 {% endblock content %}
