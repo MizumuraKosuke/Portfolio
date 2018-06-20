@@ -13,6 +13,7 @@ body {
 #container {
     position: relative;
     background-image: url("../media/blue.jpg");
+    background-size: cover;
     height: auto !important;
     height: 100%;
     min-height: 100%;
@@ -41,10 +42,6 @@ header img{
     top: 0em;
     width: 10em;
     height: 10em;
-}
-
-#oto {
-    left: 44em;
 }
 
 header #topname {
