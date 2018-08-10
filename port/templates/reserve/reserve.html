@@ -1,0 +1,20 @@
+{% extends "base_reserve.html" %}
+
+{% load staticfiles %}
+
+{% block reserve_content %}
+
+<div id="top">
+    <div id="top_audience">
+        <a href="{% url 'audience_form' %}">
+            <p>For Audience</p>
+        </a>
+    </div>
+    <div id="top_artist">
+        <a href="{% url 'artist_form' %}">
+            <p>For Artist</p>
+        </a>
+    </div>
+</div>
+  
+{% endblock reserve_content %}

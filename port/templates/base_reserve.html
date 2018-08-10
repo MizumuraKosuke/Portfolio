@@ -1,0 +1,29 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+
+<html lang="ja">
+    <head>
+        <title>GO to LIVE!!</title>
+        <link rel="stylesheet" href="{% static 'css/reserve_base.css' %}">
+        <link rel="shortcut icon" href="{% static 'favicon.ico' %}">
+    </head>
+    <body>
+        <div id="container">
+            <header>
+                <a href="{% url 'reserve' %}">Go to Live!!</a>
+            </header>
+            <nav id="main_menu"></nav>
+            <div id="contents">
+                {% block reserve_content %}
+                {% endblock reserve_content %}
+            </div>
+            <footer>
+                <p id="copyright">
+                    Copyright©︎ 2018 Kosuke Mizumura All rights reserved.
+                </p>
+            </footer>
+        </div>
+        <script type="text/javascript" src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    </body>
+</html>
