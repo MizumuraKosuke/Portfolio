@@ -5,14 +5,14 @@
 {% block reserve_content %}
 
 <div id="top">
-    <div id="top_audience">
+    <div id="top-audience">
         <a href="{% url 'audience_form' %}">
-            <p>For Audience</p>
+            <img src="{% static 'media/foraudience.jpg' %}" alt="forartist" class="forpic">
         </a>
     </div>
-    <div id="top_artist">
+    <div id="top-artist">
         <a href="{% url 'artist_form' %}">
-            <p>For Artist</p>
+            <img src="{% static 'media/forartist.jpg' %}" alt="forartist" class="forpic">
         </a>
     </div>
 </div>
