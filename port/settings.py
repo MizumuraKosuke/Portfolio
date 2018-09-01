@@ -133,6 +133,23 @@ STATICFILES_DIRS = (
 
 STATIC_ROOT = 'staticfiles'
 
+# user model
+AUTH_USER_MODEL = 'home.User'
+
+# login
+LOGIN_URL = '/reserve/login/'
+LOGIN_REDIRECT_URL = '/reserve/profile'
+
+
+# email
+# gmailで送信
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'band.loafer@gmail.com'
+EMAIL_HOST_PASSWORD = 'lrfduubaxvzqicjp'
+EMAIL_USE_TLS = True
+
 
 DEBUG = False
 

@@ -1,0 +1,15 @@
+{% extends "base_reserve.html" %}
+
+{% load staticfiles %}
+
+{% block reserve_content %}
+
+<p>名前 : {{ user.username }}</p>
+<p>ニックネーム : {{ user.nick_name }}</p>
+<p>メールアドレス : {{ user.email }}</p>
+<p>生年月日 : {{ user.birthday }}</p>
+<p>性別 : {{ user.gender }}</p>
+<p>最期のログイン : {{ user.last_login }}</p>
+<p>アカウントの作成日 : {{ user.date_joined }}</p>
+
+{% endblock reserve_content %}

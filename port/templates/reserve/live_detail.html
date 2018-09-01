@@ -1,0 +1,33 @@
+{% extends "base_reserve.html" %}
+
+{% load staticfiles %}
+
+{% block reserve_content %}
+
+<div id="live-detail">
+    <div class="live-name">{{ live.name }}</div>
+    <div class="live-artists">
+        {% for artist in live.artists.all %}
+            <div class="live-artist">{{ artist }}</div>
+        {% endfor %}
+    </div>
+    <div class="live-place">
+        <a href="{{ live.url }}">{{ live.place }}</a>
+    </div>
+    <div class="live-date">{{ live.date }}</div>
+    <div class="live-time">
+        <div class="open-time">{{ live.open_time }}</div>
+        <div class="start-time">{{ live.start_time }}</div>
+    </div>
+    <div class="price">
+        <div class="adv">¥{{ live.adv }}</div>
+        <div class="door">¥{{ live.door }}</div>
+    </div>
+    <div class="this_reserve">
+        <p>
+            <a href="{% url 'live_reserve' pk=live.pk %}">こちらのライブを予約する</a>
+        </p>
+    </div>
+</div>
+
+{% endblock reserve_content %}

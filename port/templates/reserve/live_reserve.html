@@ -1,0 +1,28 @@
+{% extends "base_reserve.html" %}
+
+{% load staticfiles %}
+
+{% block reserve_content %}
+
+<div id=reserve-form>
+    <p>ライブ予約</p>
+    <p>イベント名: {{ live.name }}</p>
+    <form method="POST" class='form'>
+        {% csrf_token %}
+        <div class="form-group col-md-11 my-0">
+            <label for="id_name">お名前</label>
+                {{ form.name }}
+                {{ form.name.errors }}
+            <p class="help-block">{{ form.name.help_text }}</p>
+        </div>
+        <div class="form-group col-md-11 my-0">
+            <label for="id_ticket">枚数</label>
+                {{ form.ticket }}
+                {{ form.ticket.errors }}
+            <p class="help-block">{{ form.ticket.help_text }}</p>
+        </div>
+        <button type="submit" class="save btn btn-default">Save</button>
+    </form>
+</div>
+  
+{% endblock reserve_content %}

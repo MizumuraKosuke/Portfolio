@@ -1,0 +1,16 @@
+{% extends "base_reserve.html" %}
+
+{% load staticfiles %}
+
+{% block reserve_content %}
+
+<div id=reserve-form>
+    <p>ライブ予約</p>
+    <form method="POST" class='form'>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Save</button>
+    </form>
+</div>
+  
+{% endblock reserve_content %}

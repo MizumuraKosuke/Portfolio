@@ -1,0 +1,5 @@
+{{ reserve_user.nick_name }} 様、
+チケットの取り置きが完了いたしました。
+
+イベント名： {{ audience.live }}
+枚数: {{ audience.ticket }}

@@ -1,0 +1,50 @@
+{% extends "base_reserve.html" %}
+
+{% load staticfiles %}
+
+{% block reserve_content %}
+
+<div id=audience-page>
+    <div id=serch>
+        <p>検索</p>
+        <form method="GET" class="form" novalidate>
+            <div class="form-group col-md-11">
+                <label for="id_artist">アーティストから選ぶ</label>
+                {{ form.artists }}
+                {{ form.artists.error }}
+                <p class="help-block">{{ form.artists.help_text }}</p>
+            </div>
+            <div class="form-group col-md-11">
+                <button type="submit" class="btn btn-block btn-outline-primary" name="serch_artist" value="artist">検索</button>
+            </div>
+            <div class="form-group col-md-11">
+                <label for="id_place">会場で検索</label>
+                {{ form.place }}
+                {{ form.place.error }}
+                <p class="help-block">{{ form.place.help_text }}</p>
+            </div>
+            <div class="form-group col-md-11">
+                <button type="submit" class="btn btn-block btn-outline-primary" name="serch_place" value="place">検索</button>
+            </div>
+            <div class="form-group col-md-11">
+                <label for="id_name">イベント名で検索</label>
+                {{ form.name }}
+                {{ form.name.error }}
+                <p class="help-block">{{ form.name.help_text }}</p>
+            </div>
+            <div class="form-group col-md-11">
+                <button type="submit" class="btn btn-block btn-outline-primary" name="serch_name" value="name">検索</button>
+            </div>
+        </form>
+        <div id="serch-resolve">
+            {% for live in lives %}
+                <p><a href="{% url 'live_detail' pk=live.pk %}">{{ live }}</a></p>
+            {% endfor %}
+        </div>
+    </div>
+    <a href="{% url 'reserve_form' %}">
+        <p>ライブ予約</p>
+    </a>
+</div>
+
+{% endblock reserve_content %}

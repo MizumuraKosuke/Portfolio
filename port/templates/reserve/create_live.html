@@ -9,6 +9,9 @@
     <form method="POST" class='form'>
         {% csrf_token %}
         {{ form.as_p }}
+        <p>
+            <a href="{% url 'create_artist' %}">アーティスト作成</a>
+        </p>
         <button type="submit" class="save btn btn-default">Save</button>
     </form>
 </div>

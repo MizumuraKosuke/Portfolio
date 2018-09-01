@@ -1,0 +1,6 @@
+{{ org.nick_name }} 様、
+チケットの予約が入りました。
+
+イベント名： {{ audience.live }}
+お名前： {{ audience.name }}
+枚数: {{ audience.ticket }}

@@ -1,0 +1,2 @@
+{{ user.nick_name }} さん、以下から本登録してください。
+{{ protocol}}://{{ domain }}{% url 'create_complete' uidb64=uid %}

@@ -1,0 +1,10 @@
+{% extends "base_reserve.html" %}
+
+{% load staticfiles %}
+
+{% block reserve_content %}
+
+<p>{{ live }}の予約が完了しました。</p>
+<p>{{ reserve_user.nick_name }}様宛に、予約完了メールを送信しました。</p>
+
+{% endblock reserve_content %}
