@@ -4,16 +4,61 @@
 
 {% block reserve_content %}
 
-<div id=artist-page>
-    <p>ライブ情報入力フォーム</p>
-    <form method="POST" class='form'>
-        {% csrf_token %}
-        {{ form.as_p }}
-        <p>
-            <a href="{% url 'create_artist' %}">アーティスト作成</a>
-        </p>
-        <button type="submit" class="save btn btn-default">Save</button>
-    </form>
+<div class="sub-contents">
+    <div id="create-live">
+        <div class="page-title">
+            <h2>ライブ登録</h2>
+        </div>
+        <form class='form' method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="id_name">公演名</label>
+                {{ form.name }}
+            </div>
+            <div class="form-group">
+                <label for="id_name">アーティスト</label>
+                {{ form.artists }}
+                <p>
+                    <a href="{% url 'create_artist' %}" id="to-art-cre">アーティスト新規登録</a>
+                </p>
+            </div>
+            <div class="form-group">
+                    <label for="id_name">会場</label>
+                    {{ form.place }}
+                </div>
+            <div class="form-group">
+                <label for="id_name">詳細URL</label>
+                {{ form.url }}
+            </div>
+            <div class="form-group">
+                <label for="id_name">公演日</label>
+                {{ form.date }}
+            </div>
+            <div class="form-group">
+                <label for="id_name">開場</label>
+                {{ form.open_time }}
+            </div>
+            <div class="form-group">
+                <label for="id_name">開演</label>
+                {{ form.start_time }}
+            </div>
+            <div class="form-group">
+                <label for="id_name">予約料金</label>
+                {{ form.adv }}
+            </div>
+            <div class="form-group">
+                <label for="id_name">当日料金</label>
+                {{ form.door }}
+            </div>
+            <div class="form-group">
+                <label for="id_name">公開日時</label>
+                {{ form.published_date }}
+            </div>
+            <div class="form-group">
+                <button type="submit" class="save btn btn-default">登録</button>
+            </div>
+        </form>
+    </div>
 </div>
   
 {% endblock reserve_content %}

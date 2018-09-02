@@ -18,7 +18,6 @@ class LiveForm(forms.ModelForm):
         model = Live
         fields = ('name', 'artists', 'place', 'url', 'date', 'open_time', 'start_time', 'adv', 'door', 'published_date',)
 
-
 class AudienceForm(forms.ModelForm):
 
     class Meta:

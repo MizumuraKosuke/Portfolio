@@ -4,21 +4,14 @@
 
 {% block reserve_content %}
 
-<div class="container-fluid" style="margin-top: 60px;">
-    <div class="row">
-      <div class="col-md-6 offset-md-3">
-        <div class="card">
-          <div class="card-header">メールの送信</div>
-          <div class="card-body p-3">
-            <p class="card-text">
-              会員登録ありがとうございます。様宛に、会員登録用のURLを記載したメールを送信しました。
-              </p>
-            <div class="alert alert-danger" role="alert">現時点では会員登録は完了していません。</div>
-             <p class="card-text">メールをご確認の上、メール本文中のURLをクリックし、本登録を行って下さい。</p>
-          </div><!-- end card-body-->
-        </div><!-- end card-->
-      </div><!-- end col-md-6 offset-md-3 -->
-    </div><!-- end row -->
-</div><!-- end container-fluid-->
+<div class="sub-contents">
+  <div id="create-done">
+      <div class="texts">
+        <p class="card-text">アカウント登録ありがとうございます。{{ user.nick_name }}様宛に、アカウント登録用のURLを記載したメールを送信しました。</p>
+        <p class="card-text">現時点ではアカウント登録は完了していません。</p>
+        <p class="card-text">メールをご確認の上、メール本文中のURLをクリックし、本登録を行って下さい。</p>
+      </div>
+  </div>
+</div>
 
 {% endblock reserve_content %}

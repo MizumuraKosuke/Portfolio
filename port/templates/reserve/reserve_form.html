@@ -4,13 +4,23 @@
 
 {% block reserve_content %}
 
-<div id=reserve-form>
-    <p>ライブ予約</p>
-    <form method="POST" class='form'>
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class="save btn btn-default">Save</button>
-    </form>
+<div class="sub-contents">
+    <div class="reserve">
+        <div id="reserve-detail-form">
+            <div class="page-title">
+                <h2>ライブ予約</h2>
+            </div>
+            <form class='form' method="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                    {{ form.as_p }}
+                </div>
+                <div class="form-group button">
+                    <button type="submit" class="btn">予約</button>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>
   
 {% endblock reserve_content %}

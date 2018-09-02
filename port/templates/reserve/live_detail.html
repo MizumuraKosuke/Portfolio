@@ -4,29 +4,65 @@
 
 {% block reserve_content %}
 
-<div id="live-detail">
-    <div class="live-name">{{ live.name }}</div>
-    <div class="live-artists">
-        {% for artist in live.artists.all %}
-            <div class="live-artist">{{ artist }}</div>
-        {% endfor %}
+<div class="sub-contents">
+    <div class="page-title">
+        <h2>イベント詳細</h2>
     </div>
-    <div class="live-place">
-        <a href="{{ live.url }}">{{ live.place }}</a>
-    </div>
-    <div class="live-date">{{ live.date }}</div>
-    <div class="live-time">
-        <div class="open-time">{{ live.open_time }}</div>
-        <div class="start-time">{{ live.start_time }}</div>
-    </div>
-    <div class="price">
-        <div class="adv">¥{{ live.adv }}</div>
-        <div class="door">¥{{ live.door }}</div>
-    </div>
-    <div class="this_reserve">
-        <p>
-            <a href="{% url 'live_reserve' pk=live.pk %}">こちらのライブを予約する</a>
-        </p>
+    <div id="live-detail">
+        <div class="live-detail-data">
+            <div class="live-element">
+                <p class="le-name le">公演名:</p>
+                <div class="live-name le">{{ live.name }}</div>
+            </div>
+            <div class="live-element">
+                <p class="le-name le">アーティスト:</p>
+                <div class="live-artists le">
+                    {% for artist in live.artists.all %}
+                        <div class="live-artist le">{{ artist }}</div>
+                        <p class="le">/</p>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="live-element">
+                <p class="le-name le">会場:</p>
+                <div class="live-place le">
+                    <a href="{{ live.url }}">{{ live.place }}</a>
+                </div>
+            </div>
+            <div class="live-element">
+                <p class="le-name le">公演日:</p>
+                <div class="live-date le">{{ live.date }}</div>
+            </div>
+            <div class="live-element">
+                <div class="live-time">
+                    <div class="le-deep">
+                        <p class="le-name le">開場:</p>
+                        <div class="open-time le">{{ live.open_time }}</div>
+                    </div>
+                    <div class="le-deep">
+                        <p class="le-name le">開演:</p>
+                        <div class="start-time le">{{ live.start_time }}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="live-element">
+                <div class="price">
+                    <div class="le-deep">
+                        <p class="le-name le">予約料金:</p>
+                        <div class="adv le">¥{{ live.adv }}</div>
+                    </div>
+                    <div class="le-deep">
+                        <p class="le-name le">当日料金:</p>
+                        <div class="door le">¥{{ live.door }}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page-element">
+            <p>
+                <a href="{% url 'live_reserve' pk=live.pk %}">こちらのライブを予約する</a>
+            </p>
+        </div>
     </div>
 </div>
 

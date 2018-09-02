@@ -23,18 +23,48 @@ h1 {
     font-size: 4em;
 }
 
+p {
+    font-size: 1em;
+}
+
 a {
     text-decoration: none;
     color: black;
 }
 
 a:hover {
-    color: grey;
+    color: lightgrey;
+}
+
+/* ヘッダー */
+header {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    border-bottom: solid 0.05em #f0f0f0;
+}
+
+#nav {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: aliceblue;
+    border: solid 0.08em #d0d0d0;
+    border-radius: 0.08em;
+}
+
+#nav p {
+    font-size: 0.8em;
+}
+
+.nav-element {
+    float: left;
+    padding-right: 1em;
 }
 
 /* コンテンツ */
 #contents {
-    margin-top: 1em;
+    margin-top: 2em;
     padding-bottom: 1em;
     width: 100%;
 }
@@ -53,6 +83,212 @@ a:hover {
     margin: 0;
 }
 
+/* サブページ */
+
+.sub-contents {
+    margin: auto;
+    margin-bottom: 2em;
+    width: 95%;
+}
+
+.page-title {
+    text-align: center;
+    background-color: skyblue;
+    padding: 0.5em;
+    color: white;
+    font-size: 1em;
+}
+
+.page-element {
+    font-weight: bold;
+}
+
+#live-detail {
+    margin: auto;
+    margin-top: 2em;
+    padding: 1em;
+    width: 80%;
+    font-size: 1.5em;
+}
+
+.live-detail-data {
+    background-color: #f0f0f0;
+}
+
+.live-element {
+    overflow: hidden;
+    padding: 0.8em 0;
+    border: solid 0.1em white;
+}
+
+.le {
+    float: left;
+}
+
+.le-name, .open-time, .adv {
+    margin-right: 1em;
+}
+
+#user-login-form .page-element {
+    text-align: center;
+    margin-top: 0.5em;
+}
+
+#user-login-form .form-group {
+    margin-top: 2em;
+}
+
+#profs {
+    margin: auto;
+    margin-top: 2em;
+    padding: 1em;
+    width: 80%;
+}
+
+.my-element {
+    padding: 0.5em 0;
+}
+
+.texts {
+    margin-top: 3em;
+}
+
+.p-btn {
+    color: orangered;
+}
+
+.p-btn:hover {
+    color: lightgray;
+}
+
+#event-name {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 2em;
+}
+
+/* 検索 */
+
+.serch {
+    margin: auto;
+    margin-top: 2em;
+    padding: 1em;
+    width: 80%;
+    box-shadow: 0 0 1em dimgray;
+    border-radius: 0.5em;
+}
+
+.serch-box {
+    margin-top: 1em;
+}
+
+.serch-group {
+    display: inline;
+}
+
+.serch label, .serch input {
+    font-size: 0.8em;
+}
+
+.serch label {
+    font-weight: bold;
+}
+
+.serch input {
+    width: 60%;
+    background-color: aliceblue;
+}
+
+.serch input, .s-btn {
+    padding: 0.8em;
+} 
+
+.s-btn {
+    background-color: navy;
+    color: white;
+    font-size: 0.8em;
+    border-radius: 0.2em;
+}
+
+#serch-results .sub-title {
+    margin-top: 1em;
+    background-color: orangered;
+    text-align: center;
+    color: white;
+}
+
+#serch-results .serch-live {
+    overflow: hidden;
+    background-color: #f0f0f0;
+    border-top: solid 0.05em white;
+}
+
+#serch-results .s-live-data {
+    float: left;
+    padding-left: 0.5em;
+    border-left: solid 0.05em white;
+}
+
+#serch-results .s-name {
+    width: 40%;
+}
+
+#serch-results .s {
+    width: 20%;
+}
+
+/* フォーム */
+
+.form {
+    margin: auto;
+    margin-top: 2em;
+    padding: 1em;
+    width: 60%;
+    border: solid 0.08em gray;
+}
+
+.form label, .form input {
+    padding: 0.5em;
+}
+
+.form label {
+    font-weight: bold;
+    display: block; 
+}
+
+.form input {
+    width: 70%;
+}
+
+.form-group {
+    margin-top: 0.5em;
+    text-align: center;
+}
+
+#to-art-cre {
+    font-size: 0.8em;
+    color: orangered;
+    border-bottom: solid 0.05em orangered;
+}
+
+#to-art-cre:hover {
+    color: lightgrey;
+    border-bottom: solid 0.05em lightgrey;
+}
+
+.btn {
+    padding: 0.5em 3em;
+    margin-top: 1em; 
+    background-color: navy;
+    color: white;
+    font-size: 1.2em;
+    border-radius: 0.2em;
+}
+
+.btn:hover {
+    background-color: orangered;
+}
+
 /* フッター */
 footer {
     position: absolute;
@@ -60,11 +296,22 @@ footer {
     height: 1em;
     width: 100%;
     background-color: black;
-    color: dimgray;
 }
 
-footer p {
-    color: dimgray;
-    text-align: right;
+footer .fot {
+    position: absolute;
+    bottom: 0;
     font-size: 0.7em;
+}
+
+.return-main {
+    left: 0.5em;
+}
+
+.copyright {
+    right: 0;
+}
+
+footer .dim-gray {
+    color: dimgray;
 }

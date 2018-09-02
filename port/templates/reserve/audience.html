@@ -4,47 +4,59 @@
 
 {% block reserve_content %}
 
-<div id=audience-page>
-    <div id=serch>
-        <p>検索</p>
-        <form method="GET" class="form" novalidate>
-            <div class="form-group col-md-11">
-                <label for="id_artist">アーティストから選ぶ</label>
-                {{ form.artists }}
-                {{ form.artists.error }}
-                <p class="help-block">{{ form.artists.help_text }}</p>
+<div class="sub-contents">
+    <div id="audience-page">
+        <div class="page-title">
+            <h2>イベント検索</h2>
+        </div>
+        <form class="serch" method="GET" novalidate>
+            <div class="serch-box">
+                <div class="serch-group">
+                    <label for="id_artist">アーティストから選ぶ</label>
+                    {{ form.artists }}
+                    {{ form.artists.error }}
+                </div>
+                <div class="serch-group">
+                    <button type="submit" class="s-btn" name="serch_artist" value="artist">検索</button>
+                </div>
             </div>
-            <div class="form-group col-md-11">
-                <button type="submit" class="btn btn-block btn-outline-primary" name="serch_artist" value="artist">検索</button>
+            <div class="serch-box">
+                <div class="serch-group">
+                    <label for="id_place">会場で検索</label>
+                    {{ form.place }}
+                    {{ form.place.error }}
+                </div>
+                <div class="serch-group">
+                    <button type="submit" class="s-btn" name="serch_place" value="place">検索</button>
+                </div>
             </div>
-            <div class="form-group col-md-11">
-                <label for="id_place">会場で検索</label>
-                {{ form.place }}
-                {{ form.place.error }}
-                <p class="help-block">{{ form.place.help_text }}</p>
+            <div class="serch-box">
+                <div class="serch-group">
+                    <label for="id_name">イベント名で検索</label>
+                    {{ form.name }}
+                    {{ form.name.error }}
+                </div>
+                <div class="serch-group">
+                    <button type="submit" class="s-btn" name="serch_name" value="name">検索</button>
+                </div>
             </div>
-            <div class="form-group col-md-11">
-                <button type="submit" class="btn btn-block btn-outline-primary" name="serch_place" value="place">検索</button>
-            </div>
-            <div class="form-group col-md-11">
-                <label for="id_name">イベント名で検索</label>
-                {{ form.name }}
-                {{ form.name.error }}
-                <p class="help-block">{{ form.name.help_text }}</p>
-            </div>
-            <div class="form-group col-md-11">
-                <button type="submit" class="btn btn-block btn-outline-primary" name="serch_name" value="name">検索</button>
+            <div class="serch-box">
+                <p class="page-element">
+                    <a href="{% url 'reserve_form' %}">イベント一覧から予約</a>
+                </p>
             </div>
         </form>
-        <div id="serch-resolve">
+        <div id="serch-results">
+            <p class="sub-title">検索結果</p>
             {% for live in lives %}
-                <p><a href="{% url 'live_detail' pk=live.pk %}">{{ live }}</a></p>
+                <div class="serch-live">
+                    <p class="s-live-data s-name"><a href="{% url 'live_detail' pk=live.pk %}">{{ live.name }}</a></p>
+                    <p class="s-live-data s">{{ live.date }}</p>
+                    <p class="s-live-data s">{{ live.place }}</p>
+                </div>
             {% endfor %}
         </div>
     </div>
-    <a href="{% url 'reserve_form' %}">
-        <p>ライブ予約</p>
-    </a>
 </div>
 
 {% endblock reserve_content %}

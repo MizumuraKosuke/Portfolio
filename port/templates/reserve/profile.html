@@ -4,12 +4,35 @@
 
 {% block reserve_content %}
 
-<p>名前 : {{ user.username }}</p>
-<p>ニックネーム : {{ user.nick_name }}</p>
-<p>メールアドレス : {{ user.email }}</p>
-<p>生年月日 : {{ user.birthday }}</p>
-<p>性別 : {{ user.gender }}</p>
-<p>最期のログイン : {{ user.last_login }}</p>
-<p>アカウントの作成日 : {{ user.date_joined }}</p>
+<div class="sub-contents">
+    <div id="profile">
+        <div class="page-title">
+            <h2>プロフィール</h2>
+        </div>
+        <div id="profs">
+            <div class="my-element my-name">
+                <p>名前 : {{ user.username }}</p>
+            </div>
+            <div class="my-element my-nickname">
+                <p>ニックネーム : {{ user.nick_name }}</p>
+            </div>
+            <div class="my-element my-email">
+                <p>メールアドレス : {{ user.email }}</p>
+            </div>
+            <div class="my-element my-birthday">
+                <p>生年月日 : {{ user.birthday }}</p>
+            </div>
+            <div class="my-element my-gender">
+                <p>性別 : {{ user.gender }}</p>
+            </div>
+            <div class="my-element my-last-login">
+                <p>最期のログイン : {{ user.last_login }}</p>
+            </div>
+            <div class="my-element my-date-joined">
+                <p>アカウントの作成日 : {{ user.date_joined }}</p>
+            </div>
+        </div>
+    </div>
+</div>
 
 {% endblock reserve_content %}

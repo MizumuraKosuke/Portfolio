@@ -12,28 +12,51 @@
     <body>
         <div id="container">
             <header>
-                <a href="{% url 'reserve' %}">
-                    <h1>Go to Live!!</h1>
-                </a>
-                <p>
-                    <a href="{% url 'login' %}">ログイン</a>
-                </p>
-                <p class="text-right mb-0">
-                    <a class="nav-link" href="{% url 'create' %}">新規登録会員</a>
-                </p>
-                <p>
-                    <a href="{% url 'logout' %}">ログアウト</a>
-                </p>
+                <h1>
+                    <a href="{% url 'reserve' %}">Go to Live!!</a>
+                </h1>
+                <div id="nav">
+                    {% if user.nick_name %}
+                        <div class="nav-element">
+                            <p>
+                                <a href="{% url 'profile' %}">{{ user.nick_name }}</a>
+                            </p>
+                        </div>
+                        <div class="nav-element">
+                            <p>
+                                <a href="{% url 'logout' %}">ログアウト</a>
+                            </p>
+                        </div>
+                    {% else %}
+                        <div class="nav-element">
+                            <p>ゲストさん</p>
+                        </div>
+                        <div class="nav-element">
+                            <p>
+                                <a href="{% url 'login' %}">ログイン</a>
+                            </p>
+                        </div>
+                    {% endif %}
+                    <div class="nav-element">
+                        <p>
+                            <a class="nav-link" href="{% url 'create' %}">アカウント登録</a>
+                        </p>
+                    </div>
+                </div>
             </header>
-            <nav id="main_menu"></nav>
             <div id="contents">
                 {% block reserve_content %}
                 {% endblock reserve_content %}
             </div>
             <footer>
-                <p id="copyright">
-                    Copyright©︎ 2018 Kosuke Mizumura All rights reserved.
-                </p>
+                <div class="fot return-main">
+                    <p>
+                        <a href="{% url 'home' %}" class="dim-gray">Mizumura's portfolio</a>
+                    </p>
+                </div>
+                <div class="fot copyright">
+                    <p class="dim-gray">Copyright©︎ 2018 Kosuke Mizumura All rights reserved.</p>
+                </div>
             </footer>
         </div>
         <script type="text/javascript" src="//code.jquery.com/jquery-3.3.1.min.js"></script>

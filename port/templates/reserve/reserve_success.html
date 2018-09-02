@@ -4,7 +4,16 @@
 
 {% block reserve_content %}
 
-<p>{{ live }}の予約が完了しました。</p>
-<p>{{ reserve_user.nick_name }}様宛に、予約完了メールを送信しました。</p>
+<div class="sub-contents">
+    <div id="reserve-success">
+        <div class="page-title">
+            <h2>予約完了</h2>
+        </div>
+        <div class="texts">
+            <p class="card-text">{{ live }}の予約が完了しました。</p>
+            <p class="card-text">{{ reserve_user.nick_name }}様宛に、予約完了メールを送信しました。</p>
+        </div>
+    </div>
+</div>
 
 {% endblock reserve_content %}
